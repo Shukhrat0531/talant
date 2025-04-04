@@ -1,0 +1,284 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talant Mekteb</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="{% static 'imgs/Талант копия.png'%}" style="width: 65px;" alt=""></div>
+        <nav class="nav">
+            <a href="#">Главная</a>
+            <a href="#">О нас</a>
+            <a href="#">Контакты</a>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('https://source.unsplash.com/random/1600x900?school');">
+                <div class="slide-content">
+                    <h1>High school of Saryagash</h1>
+                    <p>Жеке зияткерлік білім беру мектебі</p>
+                    <a href="#">Танысуға жазылыңыз</a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('https://source.unsplash.com/random/1600x900?students');">
+                <div class="slide-content">
+                    <h1>Лучшая школа</h1>
+                    <p>Современное образование для детей</p>
+                    <a href="#">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <section class="about">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="your-image.jpg" alt="High School">
+        </div>
+        <div class="about-text">
+            <h2>Біз туралы</h2>
+            <p><strong>Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен сабақ бөлінісі де ұқсас.</strong> Алайда, бағдарлама мазмұны мен педагогиканың жаңа форматына байланысты қызық идеялар ұсына алады.</p>
+            <p>Білім беру саласында жаңа өзгерістер, ұсыныстар, жаңа модельдерді енгізуге мүмкіндік көп. Пәндердің мазмұнында академиялық еркіндік болады. Оқушыларға барлық пәнді оқуға міндеттемей, өздері таңдап алатындай жағдай жасалады.</p>
+            <a href="#" class="btn">Танысуға жазылыңыз</a>
+        </div>
+    </div>
+</section>
+
+<section class="clubs">
+    <div class="club-container">
+        <div class="club" style="background-image: url('dance.jpg');">
+            <div class="overlay">
+                <h3>Би үйірмесі</h3>
+                <p>Би үйірмесінің жетекшісі – Махаматсалиев Бағдаулет. Халықаралық жарыстардың жеңімпазы</p>
+            </div>
+        </div>
+        <div class="club" style="background-image: url('wrestling.jpg');">
+            <div class="overlay">
+                <h3>Күрес үйірмесі</h3>
+                <p>Күрес үйірмесінің жетекшісі – Қошқар Жанабай. “Ұстаз Барысы” турнирінің 2-орын иегері</p>
+            </div>
+        </div>
+        <div class="club" style="background-image: url('gymnastics.jpg');">
+            <div class="overlay">
+                <h3>Гимнастика үйірмесі</h3>
+                <p>Гимнастика үйірмесінің жетекшісі – Фомина Наталья</p>
+            </div>
+        </div>
+        <div class="club" style="background-image: url('boxing.jpg');">
+            <div class="overlay">
+                <h3>Бокс үйірмесі</h3>
+                <p>Бокс үйірмесінің жетекшісі – Камалхан Бекмахан</p>
+            </div>
+        </div>
+        <div class="club" style="background-image: url('dombra.jpg');">
+            <div class="overlay">
+                <h3>Домбыра үйірмесі</h3>
+                <p>Домбыра үйірмесінің жетекшісі – Қасымбекова Нұрғайша</p>
+            </div>
+        </div>
+        <div class="club" style="background-image: url('chess.jpg');">
+            <div class="overlay">
+                <h3>Шахмат үйірмесі</h3>
+                <p>Шахмат үйірмесінің жетекшісі – Калибеков Худояр</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="administration">
+    <h2>Әкімшілік құрамы</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="member">
+                <img src="keriebaeva.jpg" alt="Керейбаева Айгүл Камашовна">
+                <h3>Керейбаева Айгүл Камашовна</h3>
+                <p>Мектебіміздің құрылтайшысы</p>
+            </div>
+            <div class="member">
+                <img src="mamarayimov.jpg" alt="Мамараимов Мухиддин Ташбулатович">
+                <h3>Мамараимов Мухиддин Ташбулатович</h3>
+                <p>Мектеп директоры</p>
+            </div>
+            <div class="member">
+                <img src="temirbekov.jpg" alt="Темірбеков Ербол Конуспекович">
+                <h3>Темірбеков Ербол Конуспекович</h3>
+                <p>Мектеп басқарушысы</p>
+            </div>
+            <div class="member">
+                <img src="temirbekov.jpg" alt="Темірбеков Ербол Конуспекович">
+                <h3>Темірбеков Ербол Конуспекович</h3>
+                <p>Мектеп басқарушысы</p>
+            </div>
+            
+            <div class="member">
+                <img src="temirbekov.jpg" alt="Темірбеков Ербол Конуспекович">
+                <h3>Темірбеков Ербол Конуспекович</h3>
+                <p>Мектеп басқарушысы</p>
+            </div>
+            <div class="member">
+                <img src="temirbekov.jpg" alt="Темірбеков Ербол Конуспекович">
+                <h3>Темірбеков Ербол Конуспекович</h3>
+                <p>Мектеп басқарушысы</p>
+            </div>
+            <div class="member">
+                <img src="temirbekov.jpg" alt="Темірбеков Ербол Конуспекович">
+                <h3>Темірбеков Ербол Конуспекович</h3>
+                <p>Мектеп басқарушысы</p>
+            </div>
+            <div class="member">
+                <img src="temirbekov.jpg" alt="Темірбеков Ербол Конуспекович">
+                <h3>Темірбеков Ербол Конуспекович</h3>
+                <p>Мектеп басқарушысы</p>
+            </div>
+            <div class="member">
+                <img src="temirbekova.jpg" alt="Темірбекова Ұлбосын Дүйсеналиевна">
+                <h3>Темірбекова Ұлбосын Дүйсеналиевна</h3>
+                <p>Директордың оқу ісі жөніндегі орынбасары</p>
+            </div>
+        </div>
+        <button id="prevBtn" class="button2" aria-label="Предыдущий слайд">‹</button>
+<button id="nextBtn" class="button2" aria-label="Следующий слайд">›</button>
+    </div>
+</section>
+
+<section class="registration">
+    <div class="container">
+        <div class="text">
+            <h2>Болашақ ұстазыңызбен кездесу үшін тіркеліңіз!</h2>
+            <p>Байланыс ақпаратыңызды енгізіңіз және біздің маман сізге мүмкіндігінше тезірек хабарласады:</p>
+        </div>
+        <form class="form">
+            <input type="text" placeholder="Имя*" required>
+            <input type="tel" placeholder="Телефон*" required>
+            <button type="submit">ОТПРАВИТЬ</button>
+        </form>
+    </div>
+</section>
+
+<h1 class="janga">Білім</h1>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?students,classroom" alt="Бастауыш мектеп">
+            <div class="card-content primary">
+                <div class="card-title">Бастауыш мектеп</div>
+                <div class="card-desc">1 сыныптан 4 сыныпқа дейін</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?education,learning" alt="Негізгі мектеп">
+            <div class="card-content secondary">
+                <div class="card-title">Негізгі мектеп</div>
+                <div class="card-desc">5 сыныптан 9 сыныпқа дейін</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?students,exam" alt="Жоғарғы мектеп">
+            <div class="card-content tertiary">
+                <div class="card-title">Жоғарғы мектеп</div>
+                <div class="card-desc">10-11 сынып</div>
+            </div>
+        </div>
+    </div>
+
+
+     <h1 class="janga">Жаңалықтар</h1>
+
+    <div class="news-container">
+        <div class="news-card">
+            <img src="https://source.unsplash.com/320x200/?education,abacus" alt="News 1">
+            <div class="news-content">
+                <div class="news-date">23.11.2023</div>
+                <div class="news-title">High school of Saryagash<br>Жеке зияткерлік білім беру мектебі</div>
+                <div class="news-text">Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен сабақ бөлінісі де ұқсас...</div>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="https://source.unsplash.com/320x200/?dance,competition" alt="News 2">
+            <div class="news-content">
+                <div class="news-date">04.11.2023</div>
+                <div class="news-title">High school of Saryagash<br>Жеке зияткерлік білім беру мектебі</div>
+                <div class="news-text">Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен сабақ бөлінісі де ұқсас...</div>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="https://source.unsplash.com/320x200/?boxing,kids" alt="News 3">
+            <div class="news-content">
+                <div class="news-date">04.11.2023</div>
+                <div class="news-title">High school of Saryagash<br>Жеке зияткерлік білім беру мектебі</div>
+                <div class="news-text">Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен сабақ бөлінісі де ұқсас...</div>
+            </div>
+        </div>
+    </div>
+       
+    <footer>
+    <div class="containerf">
+        <div class="footer-left">
+            <img src="logo.png" alt="High School of Saryagash" class="logo">
+            <p>Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен сабақ бөлінісі де ұқсас. Алайда, бағдарлама мазмұны мен педагогиканың жаңа форматына байланысты қызық идеялар ұсына алады.</p>
+        </div>
+        <div class="footer-center">
+            <h3>Байланыс</h3>
+            <p>Түркістан облысы, Сарыағаш ауданы, Сарыағаш қаласы, Майлықожа көшесі, 35а</p>
+            <p>9:00-ден 18:00-ге дейін толық сменді оқыту</p>
+            <p><a href="tel:+77772528283" class="phone">+7-777-252-8283</a></p>
+            <p><a href="mailto:highschool.ofsaryagash.18@mail.ru" class="email">highschool.ofsaryagash.18@mail.ru</a></p>
+            <div class="social-icons">
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="tiktok.png" alt="TikTok"></a>
+                <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.540106352667!2d69.58194711087846!3d42.309677571077586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91fd162714e83%3A0x75fbbb9a62012d36!2s%E2%84%961%20Talant%20mektep!5e0!3m2!1sru!2skz!4v1741972674462!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</footer>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav').classList.toggle('show');
+        }
+        
+        var swiper = new Swiper(".swiper", {
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            autoplay: { delay: 5000 },
+        });
+
+         const carousel = document.querySelector('.carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+    </script>
+</body>
+</html>
