@@ -58,22 +58,55 @@
         </div>
     </section>
 
-    <footer>
-        <div class="containerf">
-            <div class="footer-left">
-                <img src="{% static 'logo.png' %}" alt="Talant Mekteb" class="logo">
-                <p>Жеке мектептер мемлекеттік бағдарламамен сабақ береді...</p>
-            </div>
-            <div class="footer-center">
-                <h3>Байланыс</h3>
-                <p>Түркістан облысы, Сарыағаш ауданы, Сарыағаш қаласы, Майлықожа көшесі, 35а</p>
-            </div>
-            <div class="footer-right">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.540106352667!2d69.58194711087846!3d42.309677571077586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91fd162714e83%3A0x75fbbb9a62012d36!2s%E2%84%961%20Talant%20mektep!5e0!3m2!1sru!2skz!4v1741972674462!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+     <footer>
+      <div class="containerf">
+        <div class="footer-left">
+          <img
+            src="{% static 'imgs/Талант копия.png'%}"
+            alt="High School of Saryagash"
+            class="logo"
+            
+          />
+          <p>
+            Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен
+            сабақ бөлінісі де ұқсас. Алайда, бағдарлама мазмұны мен
+            педагогиканың жаңа форматына байланысты қызық идеялар ұсына алады.
+          </p>
         </div>
+        <div class="footer-center">
+          <h3>Байланыс</h3>
+          <p>
+           Шымкент қаласы, Әл-Фараби ауданы, Жангельдин көшесі 13 ғимарат 
+          </p>
+          <p>9:00-ден 18:00-ге дейін толық сменді оқыту</p>
+          <p><a href="tel:+77772528283" class="phone">+7-777-252-8283</a></p>
+          <p>
+            <a href="mailto:highschool.ofsaryagash.18@mail.ru" class="email"
+              >talant-school@mail.ru</a
+            >
+          </p>
+          <div class="social-icons">
+            {% for social in social_links %}
+            <a href="{{ social.url }}"
+              ><img src="{{ social.icon.url }}" alt="{{ social.name }}"
+            /></a>
+            {% endfor %}
+            <a class="btn" href="https://wa.me/87478707743">Тікелей ватсапка жазу</a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.540106352667!2d69.58194711087846!3d42.309677571077586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91fd162714e83%3A0x75fbbb9a62012d36!2s%E2%84%961%20Talant%20mektep!5e0!3m2!1sru!2skz!4v1741972674462!5m2!1sru!2skz"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
     </footer>
-
     <script>
         function toggleMenu() {
             const nav = document.getElementById('nav-menu');

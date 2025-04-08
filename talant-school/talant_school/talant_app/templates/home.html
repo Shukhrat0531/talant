@@ -78,7 +78,7 @@
         >
           <div class="overlay">
             <h3>{{ club.name }}</h3>
-            <p>{{ club.description }}</p>
+            <p>{{ club.description|truncatewords:12 }}</p>
           </div>
         </a>
         {% endif %} {% endfor %}
@@ -169,14 +169,13 @@
         <div class="footer-center">
           <h3>Байланыс</h3>
           <p>
-            Түркістан облысы,  ауданы,  қаласы, Майлықожа
-            көшесі, 35а
+           Шымкент қаласы, Әл-Фараби ауданы, Жангельдин көшесі 13 ғимарат 
           </p>
           <p>9:00-ден 18:00-ге дейін толық сменді оқыту</p>
           <p><a href="tel:+77772528283" class="phone">+7-777-252-8283</a></p>
           <p>
             <a href="mailto:highschool.ofsaryagash.18@mail.ru" class="email"
-              >highschool.ofsaryagash.18@mail.ru</a
+              >talant-school@mail.ru</a
             >
           </p>
           <div class="social-icons">
