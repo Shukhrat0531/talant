@@ -1,11 +1,15 @@
 
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Talant Mekteb</title>
+    <meta name="description" content="Образовательная школа «1 Talant» в Шымкенте — обучение по государственной программе с индивидуальным подходом, кружки, Лицей и Шебер классы, современные методики и комфортная среда для развития детей." />
+<meta name="keywords" content="школа, образование, Шымкент, 1 Talant, Лицей, Шебер сынып, кружки, начальная школа, средняя школа, высшая школа, обучение детей, частная школа" />
+<meta name="author" content="1 Talant" />
+<meta name="robots" content="index, follow" />
+<title>Talant — Частная школа в Шымкенте | Образование и кружки</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link
       rel="stylesheet"
@@ -20,12 +24,13 @@
         </a>
     </div>
     <nav class="nav" id="nav-menu">
-        <a href="#about">Біз туралы</a>
-        <a href="#uyrme">Үйірмелер</a>
-        <a href="#qyzmetker">Қызметкерлер</a>
-        <a href="{% url 'accreditation'%}">Мектеп</a>
-        <a href="#news">Жаңалықтар</a>
-    </nav>
+      <a href="#about">О нас</a>
+      <a href="#uyrme">Кружки</a>
+      <a href="#qyzmetker">Сотрудники</a>
+      <a href="{% url 'accreditation'%}">Школа</a>
+      <a href="#news">Новости</a>
+  </nav>
+  
 
     <div class="burger" onclick="toggleMenu()">
         <div></div>
@@ -63,13 +68,13 @@
           <h2>{{ about.title }}</h2>
           <p><strong>{{ about.text1 }}</strong></p>
           <p>{{ about.text2 }}</p>
-          <a href="#" class="btn">Танысуға жазылыңыз</a>
+          <a href="#wats" class="btn">Запишитесь на ознакомление</a>
         </div>
       </div>
     </section>
 
     <section id="uyrme" class="clubs">
-      <h1 class="clubs_title">Үйірмелер</h1>
+      <h1 class="clubs_title">Кружки</h1>
       <div class="club-container">
         {% for club in clubs %} {% if club.is_active %}
         <a
@@ -87,7 +92,7 @@
     </section>
 
     <section id="qyzmetker" class="administration">
-      <h2>Әкімшілік құрамы</h2>
+      <h2>Административный состав</h2>
       <div class="carousel-container">
         <div class="carousel">
           {% for member in administration %}
@@ -109,19 +114,20 @@
 
    <section id="reg" class="registration">
     <div class="container">
-        <div class="text">
-            <h2>Болашақ ұстазыңызбен кездесу үшін тіркеліңіз!</h2>
-            <p>Байланыс ақпаратыңызды енгізіңіз және біздің маман сізге мүмкіндігінше тезірек хабарласады:</p>
-        </div>
+      <div class="text">
+        <h2>Зарегистрируйтесь, чтобы встретиться с будущим преподавателем!</h2>
+        <p>Введите свои контактные данные, и наш специалист свяжется с вами как можно скорее:</p>
+    </div>
+    
         <form class="reg-form" method="POST" action="{% url 'home' %}">
             {% csrf_token %}
             {{ form.as_p }}
-            <button class="sub_btn" type="submit">Танысуға жазылыңыз</button>
-        </form>
+            <button class="sub_btn" type="submit">Записаться на ознакомление</button>
+          </form>
     </div>
 </section>
 
-    <h1 class="janga">Білім</h1>
+<h1 class="janga">Образование</h1>
     <div class="container">
       {% for level in education_levels %}
       <div class="card">
@@ -136,7 +142,7 @@
       {% endfor %}
     </div>
 
-    <h1 id="news" class="janga">Жаңалықтар</h1>
+    <h1 id="news" class="janga">Новости</h1>
     <div class="news-container">
       {% for news_item in news %}
       <a class="news_a" href="{% url 'news' news_item.id%}">
@@ -162,32 +168,32 @@
             
           />
           <p>
-            Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен
-            сабақ бөлінісі де ұқсас. Алайда, бағдарлама мазмұны мен
-            педагогиканың жаңа форматына байланысты қызық идеялар ұсына алады.
-          </p>
+            Частные школы обучают по государственной программе, предметы и распределение уроков также схожи. Однако благодаря новому формату содержания программы и педагогики они могут предлагать интересные идеи.
+        </p>
+        
         </div>
         <div class="footer-center">
           <h3>Байланыс</h3>
           <p>
-           Шымкент қаласы, Әл-Фараби ауданы, Жангельдин көшесі 13 ғимарат 
-          </p>
-          <p>9:00-ден 18:00-ге дейін толық сменді оқыту</p>
-          <p><a href="tel:+77772528283" class="phone">+7-778 064 16 16</a></p>
-          <p><a href="tel:+77772528283" class="phone">+7-771 737 16 16</a></p>
-          
-<p>
-            <a href="mailto:highschool.ofsaryagash.18@mail.ru" class="email"
-              >shkola_talant_1@mail.ru</a
-            >
-          </p>
+            Город Шымкент, район Аль-Фараби, улица Жангельдина, здание 13
+        </p>
+        <p>Полный учебный день с 9:00 до 18:00</p>
+        <p><a href="tel:+77772528283" class="phone">+7-778 064 16 16</a></p>
+        <p><a href="tel:+77772528283" class="phone">+7-771 737 16 16</a></p>
+        
+        <p>
+            <a href="mailto:highschool.ofsaryagash.18@mail.ru" class="email">
+                shkola_talant_1@mail.ru
+            </a>
+        </p>
+        
           <div class="social-icons">
             {% for social in social_links %}
             <a href="{{ social.url }}"
               ><img src="{{ social.icon.url }}" alt="{{ social.name }}"
             /></a>
             {% endfor %}
-            <a class="btn" href="https://wa.me/87080331616">Тікелей ватсапка жазу</a>
+            <a id="wats" class="btn" href="https://wa.me/87080331616">Написать напрямую в WhatsApp</a>
           </div>
         </div>
         <div class="footer-right">

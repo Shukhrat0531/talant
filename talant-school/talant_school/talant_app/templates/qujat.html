@@ -1,26 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Аккредитация - Talant Mekteb</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
 <body>
     <header class="header">
         <div class="logo">
             <a href="{% url 'home' %}">
-                <img class="log" src="{% static 'imgs/Талант копия.png' %}" style="width: 60px" alt="Логотип">
+                <img class="log" src="{% static 'imgs/Талант копия.png' %}" style="width: 60px" alt="Логотип" />
             </a>
         </div>
         <nav class="nav" id="nav-menu">
-            <a href="#about">Біз туралы</a>
-            <a href="#uyrme">Үйірмелер</a>
-            <a href="#qyzmetker">Қызметкерлер</a>
-            <a href="{% url 'accreditation'%}">Мектеп</a>
-            <a href="#news">Жаңалықтар</a>
+            <a href="#about">О нас</a>
+            <a href="#uyrme">Кружки</a>
+            <a href="#qyzmetker">Сотрудники</a>
+            <a href="{% url 'accreditation' %}">Школа</a>
+            <a href="#news">Новости</a>
         </nav>
+
         <div class="burger" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -32,80 +33,73 @@
         <div class="accreditation-container">
             <h1>Аккредитация</h1>
             <div class="accreditation-content">
-                <p>Talant Mekteb институционалдық және мамандандырылған аккредитациядан сәтті өтті, бұл білім беру бағдарламаларының сапасы жоғары екенін және халықаралық стандарттарға сәйкестігін дәлелдейді. Аккредитация мектептің Қазақстан Республикасының Білім және ғылым министрлігінің талаптарына сай білім беретінін кепілдейді.</p>
-                
-                <h2>Аккредитацияның мақсаттары</h2>
+                <p>
+                    Talant Mekteb успешно прошла институциональную и специализированную аккредитацию, что подтверждает высокое качество образовательных программ и их соответствие международным стандартам. Аккредитация гарантирует, что школа обучает согласно требованиям Министерства образования и науки Республики Казахстан.
+                </p>
+
+                <h2>Цели аккредитации</h2>
                 <ul class="accreditation-list">
-                    <li>Білім беру бағдарламаларының сапасын растау.</li>
-                    <li>Білім беру үдерісінің ашықтығы мен айқындығын қамтамасыз ету.</li>
-                    <li>Мектептің ұлттық және халықаралық деңгейде бәсекеге қабілеттілігін арттыру.</li>
-                    <li>Оқу жоспарлары мен бағдарламаларын жетілдіруге ықпал ету.</li>
+                    <li>Подтверждение качества образовательных программ.</li>
+                    <li>Обеспечение прозрачности и ясности образовательного процесса.</li>
+                    <li>Повышение конкурентоспособности школы на национальном и международном уровнях.</li>
+                    <li>Содействие в совершенствовании учебных планов и программ.</li>
                 </ul>
 
-                <h2>Аккредитациялық құжаттар</h2>
+                <h2>Аккредитационные документы</h2>
                 <div class="accreditation-documents">
                     {% for document in documents %}
                         <div class="document-card">
                             <h3>{{ document.title }}</h3>
                             <p>{{ document.description }}</p>
-                            <a href="{{ document.url }}" class="btn doc-btn" target="_blank">Жүктеу</a>
+                            <a href="{{ document.url }}" class="btn doc-btn" target="_blank" rel="noopener noreferrer">Скачать</a>
                         </div>
                     {% empty %}
-                        <p class="empty-documents">Құжаттар әлі қосылған жоқ.</p>
+                        <p class="empty-documents">Документы пока не добавлены.</p>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </section>
 
-     <footer>
-      <div class="containerf">
-        <div class="footer-left">
-          <img
-            src="{% static 'imgs/Талант копия.png'%}"
-            alt="High School of Saryagash"
-            class="logo"
-            
-          />
-          <p>
-            Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен
-            сабақ бөлінісі де ұқсас. Алайда, бағдарлама мазмұны мен
-            педагогиканың жаңа форматына байланысты қызық идеялар ұсына алады.
-          </p>
+    <footer>
+        <div class="containerf">
+            <div class="footer-left">
+                <img
+                    src="{% static 'imgs/Талант копия.png' %}"
+                    alt="High School of Saryagash"
+                    class="logo"
+                />
+                <p>
+                    Частные школы преподают по государственной программе, предметы и расписание тоже похожи. Однако, из-за содержания программы и нового формата педагогики, могут предложить интересные идеи.
+                </p>
+            </div>
+            <div class="footer-center">
+                <h3>Контакты</h3>
+                <p>г. Шымкент, район Әл-Фараби, ул. Жангельдин, здание 13</p>
+                <p>Обучение в полном дне с 9:00 до 18:00</p>
+                <p><a href="tel:+77772528283" class="phone">+7-777-252-8283</a></p>
+                <p><a href="mailto:highschool.ofsaryagash.18@mail.ru" class="email">talant-school@mail.ru</a></p>
+                <div class="social-icons">
+                    {% for social in social_links %}
+                    <a href="{{ social.url }}">
+                        <img src="{{ social.icon.url }}" alt="{{ social.name }}" />
+                    </a>
+                    {% endfor %}
+                    <a class="btn" href="https://wa.me/87478707743">Написать в WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.540106352667!2d69.58194711087846!3d42.309677571077586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91fd162714e83%3A0x75fbbb9a62012d36!2s%E2%84%961%20Talant%20mektep!5e0!3m2!1sru!2skz!4v1741972674462!5m2!1sru!2skz"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
         </div>
-        <div class="footer-center">
-          <h3>Байланыс</h3>
-          <p>
-           Шымкент қаласы, Әл-Фараби ауданы, Жангельдин көшесі 13 ғимарат 
-          </p>
-          <p>9:00-ден 18:00-ге дейін толық сменді оқыту</p>
-          <p><a href="tel:+77772528283" class="phone">+7-777-252-8283</a></p>
-          <p>
-            <a href="mailto:highschool.ofsaryagash.18@mail.ru" class="email"
-              >talant-school@mail.ru</a
-            >
-          </p>
-          <div class="social-icons">
-            {% for social in social_links %}
-            <a href="{{ social.url }}"
-              ><img src="{{ social.icon.url }}" alt="{{ social.name }}"
-            /></a>
-            {% endfor %}
-            <a class="btn" href="https://wa.me/87478707743">Тікелей ватсапка жазу</a>
-          </div>
-        </div>
-        <div class="footer-right">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.540106352667!2d69.58194711087846!3d42.309677571077586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91fd162714e83%3A0x75fbbb9a62012d36!2s%E2%84%961%20Talant%20mektep!5e0!3m2!1sru!2skz!4v1741972674462!5m2!1sru!2skz"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
     </footer>
     <script>
         function toggleMenu() {

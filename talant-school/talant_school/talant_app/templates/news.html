@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,12 +19,14 @@
         />
        </a>
       </div>
-      <nav class="nav">
-        <a href="#about">Біз туралы</a>
-        <a href="#uyrme">Үйірмелер</a>
-        <a href="#qyzmetker">Қызметкерлер</a>
-        <a href="#news">Жаңалықтар</a>
-      </nav>
+      <nav class="nav" id="nav-menu">
+        <a href="#about">О нас</a>
+        <a href="#uyrme">Кружки</a>
+        <a href="#qyzmetker">Сотрудники</a>
+        <a href="{% url 'accreditation'%}">Школа</a>
+        <a href="#news">Новости</a>
+    </nav>
+    
       <div class="burger" onclick="toggleMenu()">
         <div></div>
         <div></div>
@@ -44,7 +46,7 @@
         <div class="news-content">
             <div class="news-text">
                 <p>{{ news.text }}</p>
-                <a href="{% url 'home' %}" class="btn">Басты бет</a>
+                <a href="{% url 'home' %}" class="btn">Главная</a>
             </div>
         </div>
     </section>
@@ -59,17 +61,15 @@
             
           />
           <p>
-            Жеке мектептер мемлекеттік бағдарламамен сабақ береді, пәндері мен
-            сабақ бөлінісі де ұқсас. Алайда, бағдарлама мазмұны мен
-            педагогиканың жаңа форматына байланысты қызық идеялар ұсына алады.
+            Частные школы обучают по государственной программе, предметы и распределение уроков также схожи. Однако благодаря новому формату содержания программы и педагогики они могут предлагать интересные идеи.
           </p>
         </div>
         <div class="footer-center">
-          <h3>Байланыс</h3>
+          <h3>Контакты</h3>
           <p>
-           Шымкент қаласы, Әл-Фараби ауданы, Жангельдин көшесі 13 ғимарат 
+           Город Шымкент, район Аль-Фараби, улица Жангельдина, здание 13
           </p>
-          <p>9:00-ден 18:00-ге дейін толық сменді оқыту</p>
+          <p>Полный учебный день с 9:00 до 18:00</p>
           <p><a href="tel:+77772528283" class="phone">+7-777-252-8283</a></p>
           <p>
             <a href="mailto:highschool.ofsaryagash.18@mail.ru" class="email"
@@ -82,7 +82,7 @@
               ><img src="{{ social.icon.url }}" alt="{{ social.name }}"
             /></a>
             {% endfor %}
-            <a class="btn" href="https://wa.me/87478707743">Тікелей ватсапка жазу</a>
+            <a class="btn" href="https://wa.me/87478707743">Написать напрямую в WhatsApp</a>
           </div>
         </div>
         <div class="footer-right">
